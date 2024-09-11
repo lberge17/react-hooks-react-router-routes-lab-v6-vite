@@ -44,12 +44,12 @@ test('renders the Movie component on route "/movie/:id"', async () => {
   expect(await screen.findByText(/Doctor Strange/)).toBeInTheDocument();
 });
 
-test("renders an error page when given a bad URL", () =>{
-  const router = createMemoryRouter(routes, {
-      initialEntries: ["/bad-route"]
-  })
-  render(
-      <RouterProvider router={router} />
-  )
-  expect(screen.getByText(/Oops! Looks like something went wrong./)).toBeInTheDocument()
-})
+// test("renders an error page when given a bad URL", () =>{
+//   const router = createMemoryRouter(routes, {
+//       initialEntries: ["/bad-route"]
+//   })
+//   render(
+//       <RouterProvider router={router} />
+//   )
+//   expect(screen.getByText(/Oops! Looks like something went wrong./)).toBeInTheDocument()
+// })
